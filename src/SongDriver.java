@@ -4,47 +4,12 @@ public class SongDriver {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        /*System.out.println("Bem-vindo ao Sistema de Gerenciamento de Músicas e Playlists!");
+        System.out.println("\nBem-vindo ao Sistema de Gerenciamento de Músicas e Playlists!\n");
 
-        int option;
-        do {
-            System.out.println("Digite o número correspondente a opção desejada:");
-            System.out.println("1 - Criar Playlist");
-            System.out.println("2 - Adicionar música a Playlist");
-            System.out.println("3 - Listar músicas da Playlist");
-            System.out.println("0 - Sair");
-            option = scanner.nextInt();
-            switch (option) {
-                case 1:
-                    System.out.println("Nome da Playlist: ");
-                    String nomePlaylist = scanner.next();
-                    Playlist userPlaylist = new Playlist(nomePlaylist);
-                    System.out.println("Playlist " + nomePlaylist + " criada com sucesso!");
-                    break;
-                case 2:
-                    System.out.println("Nome da Música: ");
-                    String nomeMusica = scanner.next();
-                    System.out.println("Nome do Artista: ");
-                    String nomeArtista = scanner.next();
-                    System.out.println("Nome do Álbum: ");
-                    String nomeAlbum = scanner.next();
-                    System.out.println("Duração da Música: ");
-                    int duracaoMusica = scanner.nextInt();
-                    Song musica = new Song (nomeMusica, nomeArtista, nomeAlbum, duracaoMusica);
-                    nomePlaylist.add(musica);
-                    break;
-                case 3:
-                    nomePlaylist.print();
-                    break;
-                case 0:
-                    nomePlaylist.clear();
-                    break;
-                default:
-                    break;
-            }
-        } while (option != 0);*/
-
-        Playlist teste = new Playlist();
+        System.out.println("Nome da Playlist: ");
+        String nomeUserPlaylist = scanner.next();
+        Playlist userPlaylist = new Playlist();
+        System.out.println("Playlist " + nomeUserPlaylist + " criada com sucesso!\n");
 
         Song song1 = new Song("Hotline Bling", "Drake", "Hotline Bing - Single", 267000);
         Song song2 = new Song("What Do You Mean?", "Justin Bieber", "What Do You Mean? - Single", 207000);
@@ -54,18 +19,47 @@ public class SongDriver {
         Song song6 = new Song("Good for You", "Selena Gomez ft. A$AP Rocky", "Good for You - Single", 221000);
         Song song7 = new Song("If You", "Big Bang", "MADE", 264000);
 
-        teste.add(song1);
-        teste.add(song2);
-        teste.add(song3);
-        teste.add(song4);
-        teste.add(song5);
-        teste.add(song6);
-        teste.add(song7);
+        userPlaylist.add(song1);
+        userPlaylist.add(song2);
+        userPlaylist.add(song3);
+        userPlaylist.add(song4);
+        userPlaylist.add(song5);
+        userPlaylist.add(song6);
+        userPlaylist.add(song7);
 
-        teste.print();
-        teste.clear();
+        int option;
+        do {
+            System.out.println("Digite o número correspondente a opção desejada:");
+            System.out.println("1 - Adicionar música a Playlist " + nomeUserPlaylist);
+            System.out.println("2 - Listar músicas da Playlist " + nomeUserPlaylist);
+            System.out.println("0 - Sair");
+            option = scanner.nextInt();
 
-        scanner.close();
+            switch (option) {
+                case 1:
+                    System.out.println("Nome da Música: ");
+                    String nomeUserMusica = scanner.next();
+                    System.out.println("Nome do Artista: ");
+                    String nomeUserArtista = scanner.next();
+                    System.out.println("Nome do Álbum: ");
+                    String nomeUserAlbum = scanner.next();
+                    System.out.println("Duração da Música: ");
+                    int duracaoUserMusica = scanner.nextInt();
+                    Song musica = new Song (nomeUserMusica, nomeUserArtista, nomeUserAlbum, duracaoUserMusica);
+                    userPlaylist.add(musica);
+                    break;
+                case 2:
+                    userPlaylist.print();
+                    break;
+                case 0:
+                    System.out.println("Encerrando Programa!");
+                    userPlaylist.clear();
+                    break;
+                default:
+                    System.out.println("ERRO: escolha uma opção existente");
+                    break;
+            }
+        } while (option != 0);
     }
 
     public static long HOURS = 60 * 60 * 1000;
@@ -131,9 +125,9 @@ public class SongDriver {
             String result = "Número de Músicas = " + count + " / Limite de Músicas = " + songs.length + "\n\n";
 
             for (int i = 0; i < count; i++) {
-                result += ("Música [" + i + "] = " + songs[i] + "\n");
+                result += ("Música [" + (i+1) + "] = " + songs[i] + "\n");
             }
-            result += "\nDuração da Playlist: " + formattedTotalTime();
+            result += "\nDuração da Playlist: " + formattedTotalTime() + "\n";
             System.out.println(result.toString());
         }
 
