@@ -8,7 +8,7 @@ A aplicação é um projeto voltado para o gerenciamento de senhas em C. Ela per
 
 ## 🛠️ Funcionalidades
 
-- Criar sua próprias playlists
+- Criar sua própria playlist
 - Adicionar suas músicas favoritas
 - Obter retorno da playlist, as músicas nela contidas e sua duração total
 <br/>
