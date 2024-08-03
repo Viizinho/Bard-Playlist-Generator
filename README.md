@@ -3,12 +3,11 @@
 ## 📖  Descrição
 
 A aplicação é um projeto voltado para o gerenciamento de senhas em C. Ela permite aos usuários criar senhas aleatórias e armazenar senhas cadastradas de forma segura. A aplicação utiliza criptografia para proteger as senhas e possui um sistema de login para garantir a segurança das informações.
-
 <br/>
 
 ## 🛠️ Funcionalidades
 
-- Criar sua próprias playlists
+- Criar sua própria playlist
 - Adicionar suas músicas favoritas
 - Obter retorno da playlist, as músicas nela contidas e sua duração total
 <br/>
