@@ -1,4 +1,4 @@
-# Bardo | Gerenciador de Playlists em Java
+# Bard | Gerenciador de Playlists em Java
 
 ## 📖  Descrição
 
