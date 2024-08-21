@@ -36,7 +36,7 @@ Uma vez tendo o Visual Studio Code instalado, configure-o para Java em: [Getting
 <br/>
 
 ## 🔮 Implementações futuras
-1. Implementar um PLayer de Músicas funcional (com músicas em formato MP3 e WAV)
+1. Implementar um Player de Músicas funcional (com músicas em formato MP3 e WAV)
 
 2. Criação de um Aplicativo, também utilizando Java
 
