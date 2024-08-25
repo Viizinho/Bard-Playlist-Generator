@@ -1,49 +1,46 @@
-# Bard | Gerenciador de Playlists em Java
+# Bard | Playlist Manager in Java
 
-## 📖  Descrição
+## 📖  Description
 
-A aplicação é um projeto voltado para o gerenciamento de senhas em C. Ela permite aos usuários criar senhas aleatórias e armazenar senhas cadastradas de forma segura. A aplicação utiliza criptografia para proteger as senhas e possui um sistema de login para garantir a segurança das informações.
+Project of an advanced playlist management system in Java, developed to store and organize information about songs, playlists, and user preferences.<br/>
+
+## 🛠️ Features
+
+- Create your own playlist
+- Add songs to each created playlist, with name, artist, album, and duration
+- Delete playlists by name
+- Retrieve the playlist, including the songs it contains and its total duration
 <br/>
 
-## 🛠️ Funcionalidades
-
-- Criar sua própria playlist
-- Adicionar suas músicas favoritas
-- Obter retorno da playlist, as músicas nela contidas e sua duração total
-<br/>
-
-## 📡 Tecnologias utilizadas 
+## 📡 Technologies used 
 <div align="center"> 
 <img align="left" alt="Java" height="30" width="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg">
-<img align="left" alt="git" height="30" width="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg">
-<img align="left" alt="vscode" height="30" width="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg">
+<img align="left" alt="Git" height="30" width="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg">
+<img align="left" alt="Intellij" height="30" width="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/intellij/intellij-original.svg">
 
 </div>
 <br/><br/>
 
-## ⏳ Inicialização
+## ⏳ Initialization
 
-Esse projeto foi desenvolvido em ambiente Linux, utilizando o Ubuntu 22 e as tecnologias citadas anteriormente. Caso você utilize outro sistema operacional, a configuração inicial do projeto pode ser um pouco diferente, por isso sugerimos que você acesse os links indicados abaixo:
+This project was developed in a Linux environment, using Ubuntu 22 and the technologies mentioned earlier. If you are using a different operating system, the initial project setup may vary slightly, so we recommend you check the links provided below:
 
-A preparação do ambiente consiste em instalar as tecnologias citadas anteriormente de acordo com seu sistema operacional.
+The environment preparation consists of installing the technologies mentioned above according to your operating system.
 
-Para instalar o Git, acesse: [Git Download](https://github.com/git-guides/install-git)
+To install Git, visit: [Git Download](https://github.com/git-guides/install-git)
 
-Para instalar o Visual Studio Code, acesse: [Visual Studio Code Download](https://code.visualstudio.com/download)
-
-Uma vez tendo o Visual Studio Code instalado, configure-o para Java em: [Getting Started with Java](https://code.visualstudio.com/docs/java/java-tutorial)
-
+To install IntelliJ IDEA, visit: [IntelliJ IDEA Download](https://www.jetbrains.com/pt-br/idea/download/)
 <br/>
 
-## 🔮 Implementações futuras
-1. Implementar um Player de Músicas funcional (com músicas em formato MP3 e WAV)
+## 🔮 Future Implementations
 
-2. Criação de um Aplicativo, também utilizando Java
-
+1. Implement new technologies (Eclipse, Angular, SQLite)
+2. Implement a functional music player (with MP3 and WAV music formats)
+3. Create an Android application, also using Java
 <br/>
 
-## 🔎 Status do Projeto
+## 🔎 Project Status
 
-![Badge em Desenvolvimento](https://img.shields.io/badge/Status-Em%20Desenvolvimento-green)
+![In Development Badge](https://img.shields.io/badge/Status-In%20Development-green)
 
 <br/>
