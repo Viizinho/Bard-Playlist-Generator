@@ -36,20 +36,29 @@ public class Menu {
                     break;
 
                 case 4:
-                    System.out.println("Please enter the name of the Playlist");
+                    System.out.println("Please enter the name of the Playlist:");
                     String namePlaylist4 = scanner.next();
-                    System.out.println("Please enter the name of the Song:");
-                    String nameSong4 = scanner.next();
-                    Functions.createSong(namePlaylist4, nameSong4);
+                    System.out.println("Please enter the title of the Song:");
+                    String title = scanner.next();
+                    System.out.println("Please enter the artist of the Song:");
+                    String artist = scanner.next();
+                    System.out.println("Please enter the album of the Song:");
+                    String album = scanner.next();
+                    System.out.println("Please enter the duration of the Song (in seconds):");
+                    int duration = scanner.nextInt();
+
+                    Song song = new Song(title, artist, album, duration);
+                    Functions.createSong(namePlaylist4, song);
                     break;
 
                 case 5:
-                    System.out.println("Please enter the name of the Playlist");
+                    System.out.println("Please enter the name of the Playlist:");
                     String namePlaylist5 = scanner.next();
-                    System.out.println("Please enter the name of the Song:");
-                    String nameSong5 = scanner.next();
-                    Functions.deleteSong(namePlaylist5, nameSong5);
+                    System.out.println("Please enter the title of the Song to delete:");
+                    String titleToDelete = scanner.next();
+                    Functions.deleteSong(namePlaylist5, titleToDelete);
                     break;
+
                 case 0:
                     System.out.println("Thank you for using Bard Playlist Generator!");
                     break;

@@ -40,18 +40,31 @@ public class Functions {
             return;
         }
 
+        int totalDuration = 0; // duração total em segundos
+
         try (BufferedReader reader = new BufferedReader(new FileReader(playlistFile))) {
             String line;
             System.out.println("Playlist: " + name);
             while ((line = reader.readLine()) != null) {
                 System.out.println(line);
+                Song song = Song.fromString(line);
+                if (song != null) {
+                    totalDuration += song.getDuration();
+                }
             }
+
+            // Calcula a duração total em horas, minutos e segundos
+            int hours = totalDuration / 3600;
+            int minutes = (totalDuration % 3600) / 60;
+            int seconds = totalDuration % 60;
+
+            System.out.printf("Total duration: %d hours, %d minutes, %d seconds%n", hours, minutes, seconds);
         } catch (IOException e) {
             System.err.println("Error reading from playlist file: " + e.getMessage());
         }
     }
 
-    public static void createSong(String playlist, String song) {
+    public static void createSong(String playlist, Song song) {
         File playlistFile = new File(PLAYLISTS_DIR + playlist + ".txt");
         if (!playlistFile.exists()) {
             System.out.println("Playlist not found: " + playlist);
@@ -59,7 +72,7 @@ public class Functions {
         }
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(playlistFile, true))) {
-            writer.write(song);
+            writer.write(song.toString());
             writer.newLine();
             System.out.println("Song added to playlist: " + playlist);
         } catch (IOException e) {
@@ -67,7 +80,7 @@ public class Functions {
         }
     }
 
-    public static void deleteSong(String playlist, String song) {
+    public static void deleteSong(String playlist, String songTitle) {
         File playlistFile = new File(PLAYLISTS_DIR + playlist + ".txt");
         if (!playlistFile.exists()) {
             System.out.println("Playlist not found: " + playlist);
@@ -82,11 +95,12 @@ public class Functions {
             String line;
             boolean found = false;
             while ((line = reader.readLine()) != null) {
-                if (!line.trim().equals(song)) {
+                Song song = Song.fromString(line);
+                if (song != null && song.getTitle().equalsIgnoreCase(songTitle)) {
+                    found = true; // Marca que a música foi encontrada e será removida
+                } else {
                     writer.write(line);
                     writer.newLine();
-                } else {
-                    found = true;
                 }
             }
 
@@ -99,6 +113,7 @@ public class Functions {
             System.err.println("Error processing playlist file: " + e.getMessage());
         }
 
+        // Substitui o arquivo original pelo arquivo temporário
         if (!playlistFile.delete()) {
             System.err.println("Could not delete original playlist file");
         }
