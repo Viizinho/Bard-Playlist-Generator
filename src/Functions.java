@@ -64,6 +64,20 @@ public class Functions {
         }
     }
 
+    public static void listPLaylist() {
+        File dir = new File(PLAYLISTS_DIR);
+        String[] playlists = dir.list((d, name) -> name.endsWith(".txt"));
+
+        if (playlists != null && playlists.length > 0) {
+            System.out.println("Playlists available: ");
+            for (String playlist : playlists) {
+                System.out.println(playlist.replace(".txt", ""));
+            }
+        } else {
+            System.out.println("No playlists found");
+        }
+    }
+
     public static void createSong(String playlist, Song song) {
         File playlistFile = new File(PLAYLISTS_DIR + playlist + ".txt");
         if (!playlistFile.exists()) {

@@ -10,8 +10,9 @@ public class Menu {
             System.out.println("1. Create a new playlist");
             System.out.println("2. Delete a playlist");
             System.out.println("3. Display playlist");
-            System.out.println("4. Create music to a playlist");
-            System.out.println("5. Delete music of a playlist");
+            System.out.println("4. List playlists");
+            System.out.println("5. Create music to a playlist");
+            System.out.println("6. Delete music of a playlist");
             System.out.println("0. Exit");
 
             opcao = scanner.nextInt();
@@ -37,6 +38,10 @@ public class Menu {
                     break;
 
                 case 4:
+                    Functions.listPLaylist();
+                    break;
+
+                case 5:
                     System.out.println("Please enter the name of the Playlist:");
                     String namePlaylist4 = scanner.nextLine();
                     System.out.println("Please enter the title of the Song:");
@@ -52,7 +57,7 @@ public class Menu {
                     Functions.createSong(namePlaylist4, song);
                     break;
 
-                case 5:
+                case 6:
                     System.out.println("Please enter the name of the Playlist:");
                     String namePlaylist5 = scanner.nextLine();
                     System.out.println("Please enter the title of the Song to delete:");
