@@ -6,7 +6,7 @@ public class Menu {
         int opcao;
 
         do {
-            System.out.println("Please select an option:");
+            System.out.println("\nPlease select an option:");
             System.out.println("1. Create a new playlist");
             System.out.println("2. Delete a playlist");
             System.out.println("3. Display playlist");
