@@ -127,7 +127,6 @@ public class Functions {
             System.err.println("Error processing playlist file: " + e.getMessage());
         }
 
-        // Substitui o arquivo original pelo arquivo temporário
         if (!playlistFile.delete()) {
             System.err.println("Could not delete original playlist file");
         }

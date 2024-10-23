@@ -42,12 +42,10 @@ public class Song {
             String title = parts[0];
             String rest = parts[1];
 
-            // Extrai artista, álbum e duração
             String artist = rest.split(" \\(")[0].trim();
             String album = rest.split("\\(")[1].split("\\)")[0].trim();
             String durationPart = rest.split("\\[")[1].split("\\]")[0].trim();
 
-            // Converte duração
             String[] durationParts = durationPart.split(":");
             int minutes = Integer.parseInt(durationParts[0]);
             int seconds = Integer.parseInt(durationParts[1]);
